@@ -1,2 +1,2 @@
 # ktrace
-分布式跟踪
+KZ Distributed Tracking System
