@@ -14,7 +14,6 @@ import java.util.concurrent.Executors;
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Trace {
-    private static final ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
     private static final ThreadLocal<TraceContext> CONTEXT = new ThreadLocal<>();
 
     private static TraceContext getContext() {
