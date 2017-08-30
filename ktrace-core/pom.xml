@@ -5,11 +5,19 @@
     <parent>
         <artifactId>ktrace</artifactId>
         <groupId>com.kongzhong.finance.ktrace</groupId>
-        <version>0.0.1-RELEASE</version>
+        <version>0.0.2-RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>agent</artifactId>
+    <artifactId>ktrace-core</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>
