@@ -6,9 +6,6 @@ import com.kongzhong.finance.ktrace.core.config.RequestIdFactory;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 /**
  * Created by IFT8 on 17/4/2.
  */

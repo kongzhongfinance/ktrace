@@ -7,9 +7,8 @@ import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.net.UnknownHostException;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Created by IFT8 on 17/4/3.
@@ -17,25 +16,13 @@ import java.util.Arrays;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class RequestIdFactory {
     private static final int SEED = getLocalMAC().hashCode();
-    private static final SecureRandom RANDOM;
-
-    static {
-        SecureRandom random;
-        try {
-            random = SecureRandom.getInstance("SHA1PRNG");
-        } catch (NoSuchAlgorithmException e) {
-            random = new SecureRandom();
-        }
-        RANDOM = random;
-        //预热
-        RANDOM.nextLong();
-    }
+    private static final Random RANDOM = new Random();
 
     /**
      * 生成RequestID（随机Id）
      */
     public static String generateRequestId() {
-        return "" + getNextRandom();
+        return String.valueOf(getNextRandom());
     }
 
     /**
