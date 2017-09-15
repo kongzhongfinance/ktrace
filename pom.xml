@@ -7,7 +7,7 @@
     <groupId>com.kongzhong.finance.ktrace</groupId>
     <artifactId>ktrace</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.2-RELEASE</version>
+    <version>0.0.3-SNAPSHOT</version>
     <modules>
         <module>ktrace-core</module>
         <module>ktrace-agent</module>

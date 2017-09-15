@@ -48,6 +48,13 @@ public class Trace {
     }
 
     /**
+     * MDC 跨线程使用
+     */
+    public static void setRequestId(String requestId) {
+        getContext().setTraceId(requestId);
+    }
+
+    /**
      * 继续跟踪（跨服务传递requestId）
      */
     public static void continueTrace(String requestId, String parentSpanId) {
