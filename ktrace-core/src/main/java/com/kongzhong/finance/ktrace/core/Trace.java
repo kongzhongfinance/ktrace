@@ -51,7 +51,8 @@ public class Trace {
      * MDC 跨线程使用
      */
     public static void setRequestId(String requestId) {
-        getContext().setTraceId(requestId);
+        getContext().setTraceId(parseTraceId(requestId));
+        getContext().setSpanId(parseParentSpanId(requestId));
     }
 
     /**
