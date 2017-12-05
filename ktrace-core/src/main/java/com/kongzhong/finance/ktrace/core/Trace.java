@@ -84,7 +84,7 @@ public class Trace {
             return null;
         }
         String[] split = requestId.split("\\|");
-        if (split.length < 1) {
+        if (split.length <= 1) {
             return getSpanId();
         }
         return split[1];
@@ -95,7 +95,7 @@ public class Trace {
             return null;
         }
         String[] split = requestId.split("\\|");
-        if (split.length < 1) {
+        if (split.length <= 1) {
             return null;
         }
         return split[0];
